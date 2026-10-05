@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Hospital Demand Lab · Abas Ukanga</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="#">↗ &nbsp; HOSPITAL DEMAND LAB</a>
+      <nav>
+        <a href="#evaluation">Evaluation</a><a href="#method">Method</a
+        ><a href="https://github.com/abasukanga4/hospital-demand-forecasting"
+          >Source ↗</a
+        >
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <div>
+          <p class="eyebrow">AN EXPERIMENT IN PUBLIC HEALTH DATA</p>
+          <h1>How predictable is<br /><em>hospital demand?</em></h1>
+          <p class="intro">
+            A transparent forecast of England’s major A&E attendances. Three
+            models, chronological testing, and a result that changes depending
+            on the period you look at.
+          </p>
+        </div>
+        <aside>
+          <span class="chip">FROZEN HISTORICAL EXPERIMENT</span>
+          <h2>188 months.<br />One honest benchmark.</h2>
+          <p>
+            August 2010–March 2026<br />Published by NHS England, 16 April 2026.
+          </p>
+          <small
+            >This is a portfolio study, not a live forecast or a staffing
+            recommendation.</small
+          >
+        </aside>
+      </section>
+      <section class="finding">
+        <span>THE FINDING</span>
+        <p>
+          The seasonal baseline won model selection. Trend regression later
+          performed better on the held-out period. The report keeps the original
+          choice and shows the difference—evidence of a changing regime, rather
+          than a reason to rewrite the test.
+        </p>
+      </section>
+      <section id="evaluation" class="section-head">
+        <div>
+          <p class="eyebrow">01 / HELD-OUT EVALUATION</p>
+          <h2>What happened after selection?</h2>
+        </div>
+        <div class="controls">
+          <label
+            >Forecast horizon<select id="horizon">
+              <option value="1">1 month ahead</option>
+              <option value="3">3 months ahead</option>
+            </select></label
+          ><label
+            >Inspect model<select id="model">
+              <option value="seasonal_naive">
+                Seasonal baseline · selected
+              </option>
+              <option value="recent_growth">Recent growth + seasonality</option>
+              <option value="seasonal_trend">Seasonal trend regression</option>
+            </select></label
+          >
+        </div>
+      </section>
+      <div id="metrics" class="metrics" aria-live="polite"></div>
+      <section class="panel">
+        <div class="panel-title">
+          <div>
+            <h3>Predictions against actual attendances</h3>
+            <p id="chart-note"></p>
+          </div>
+          <span class="key"
+            ><i></i> Actual &nbsp; <i class="forecast"></i> Forecast</span
+          >
+        </div>
+        <div id="backtest-chart" class="chart"></div>
+        <p id="interval-note" class="footnote"></p>
+      </section>
+      <div class="two-col">
+        <section class="panel">
+          <div class="panel-title">
+            <div>
+              <h3>The error, month by month</h3>
+              <p>
+                Forecast minus actual. Below zero means underestimated demand.
+              </p>
+            </div>
+          </div>
+          <div id="error-chart" class="chart compact"></div>
+        </section>
+        <section class="panel">
+          <div class="panel-title">
+            <div>
+              <h3>Same period. All three models.</h3>
+              <p>Mean absolute error in attendance counts; lower is better.</p>
+            </div>
+          </div>
+          <div id="comparison"></div>
+          <p class="footnote">
+            These are final test results. They were not used to select the
+            model.
+          </p>
+        </section>
+      </div>
+      <section class="section-head">
+        <div>
+          <p class="eyebrow">02 / CONTEXT</p>
+          <h2>The history behind the model</h2>
+        </div>
+        <label
+          >History window<select id="window">
+            <option value="2010-08">Full history</option>
+            <option value="2019-01">Since 2019</option>
+            <option value="2023-01">Since 2023</option>
+          </select></label
+        >
+      </section>
+      <section class="panel">
+        <div class="panel-title">
+          <div>
+            <h3>Average daily attendances</h3>
+            <p>
+              Monthly totals divided by calendar days, including leap years.
+              Months remain the unit of observation.
+            </p>
+          </div>
+        </div>
+        <div id="history-chart" class="chart"></div>
+        <div class="annotations">
+          <p>
+            <b>2020 disruption</b><br />The pandemic breaks the earlier pattern.
+            No attempt is made to erase or smooth away the shock.
+          </p>
+          <p>
+            <b>August 2020 definition change</b><br />Activity begins including
+            booked appointments. Comparisons across that boundary need care.
+          </p>
+          <p>
+            <b>Estimated early history</b><br />November 2010–May 2015 monthly
+            figures were apportioned from weekly reports.
+          </p>
+        </div>
+      </section>
+      <section id="method" class="section-head">
+        <div>
+          <p class="eyebrow">03 / REPRODUCIBILITY</p>
+          <h2>A time boundary at every decision</h2>
+        </div>
+      </section>
+      <div class="timeline">
+        <article>
+          <b>1. Choose</b>
+          <h3>Jan 2021–Dec 2022</h3>
+          <p>
+            24 origins. Compare the three fixed candidates on 1- and 3-month
+            forecasts using pooled MAE. The baseline wins.
+          </p>
+        </article>
+        <article>
+          <b>2. Calibrate</b>
+          <h3>Mar 2023–Feb 2024</h3>
+          <p>
+            12 origins per horizon. Freeze empirical error bands before
+            evaluation. Allow all targets to become observed.
+          </p>
+        </article>
+        <article>
+          <b>3. Test</b>
+          <h3>May 2024–Dec 2025</h3>
+          <p>
+            20 origins per horizon, with targets through March 2026. Refit at
+            each origin using only earlier observations.
+          </p>
+        </article>
+      </div>
+      <details>
+        <summary>What the uncertainty bands do—and do not—mean</summary>
+        <p>
+          The selected model’s absolute daily-rate errors from 12 calibration
+          origins define a nominal 90% band, using the finite-sample rank
+          ceil((n+1) × 0.90). With 12 examples this uses the largest error.
+          Width is then scaled by each target month’s days. Coverage and width
+          must be read together: conservative bands can cover every observation
+          while remaining too wide to be useful.
+        </p>
+        <p>
+          These dependent, changing time-series errors do not satisfy an
+          exchangeability guarantee. The empirical coverage here is not a
+          promise about future months. Bands remain frozen throughout the test.
+        </p>
+      </details>
+      <details>
+        <summary>Data vintage, timing and limits</summary>
+        <p>
+          This is a retrospective rolling-origin experiment on one revised
+          publication vintage. An origin means the last month available to the
+          model, not the calendar date when that month was published. Actual
+          publication delays and revisions are not simulated. No patient records
+          are used; national results cannot establish the staffing needs of an
+          individual hospital.
+        </p>
+        <p>
+          The Type 1 activity series includes all providers; it is distinct from
+          the performance series that excluded certain trial trusts during
+          2019–2023. Source notes also identify Type 3 shortfalls during a
+          cyber-attack; Type 3 is not this target.
+        </p>
+      </details>
+      <details>
+        <summary>Archived projections from March 2026</summary>
+        <p>
+          These forecasts illustrate the final fitted model at the snapshot
+          boundary. They are not current predictions and are not included in the
+          scored test.
+        </p>
+        <div id="projections"></div>
+      </details>
+      <div class="downloads">
+        <a href="backtest.csv" download>Download all backtest rows ↓</a
+        ><a href="attendance.csv" download>Download attendance history ↓</a
+        ><a
+          href="https://github.com/abasukanga4/hospital-demand-forecasting/blob/main/docs/METHODS.md"
+          >Read the methods ↗</a
+        >
+      </div>
+    </main>
+    <footer>
+      <span>Built by Abas Ukanga · Python / NumPy / Time-series evaluation</span
+      ><a
+        href="https://www.england.nhs.uk/statistics/wp-content/uploads/sites/2/2026/04/Monthly-AE-Time-Series-March-2026-F5ldj2.xls"
+        >NHS England source workbook ↗</a
+      >
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,2091 @@
+{
+  "title": "Hospital Demand Lab",
+  "source_url": "https://www.england.nhs.uk/statistics/wp-content/uploads/sites/2/2026/04/Monthly-AE-Time-Series-March-2026-F5ldj2.xls",
+  "source_sha256": "6760d247735e74152d2d259509589adec95cd3efb6fccc597c140f4dd0551f97",
+  "publication_date": "2026-04-16",
+  "snapshot_end": "2026-03",
+  "target": "England Type 1 A&E attendances",
+  "splits": {
+    "selection": [
+      "2021-01",
+      "2022-12"
+    ],
+    "calibration": [
+      "2023-03",
+      "2024-02"
+    ],
+    "test": [
+      "2024-05",
+      "2025-12"
+    ]
+  },
+  "models": {
+    "seasonal_naive": "Seasonal baseline",
+    "recent_growth": "Recent growth + seasonality",
+    "seasonal_trend": "Seasonal trend regression"
+  },
+  "selected": "seasonal_naive",
+  "selection_scores": {
+    "seasonal_naive": {
+      "n": 48,
+      "mae": 194181.35488505746,
+      "rmse": 249219.5272860001,
+      "wape": 0.14525668061201047,
+      "bias": -161191.3117816092
+    },
+    "recent_growth": {
+      "n": 48,
+      "mae": 202934.7930012195,
+      "rmse": 286379.36059751903,
+      "wape": 0.15180465925521744,
+      "bias": -1227.955947376043
+    },
+    "seasonal_trend": {
+      "n": 48,
+      "mae": 203604.53683802718,
+      "rmse": 240954.82706256254,
+      "wape": 0.15230565878039132,
+      "bias": -134995.60266760085
+    }
+  },
+  "calibration_n": 12,
+  "nominal_coverage": 0.9,
+  "radii": {
+    "1": 4970.225806451613,
+    "3": 4970.225806451613
+  },
+  "history": [
+    {
+      "month": "2010-08",
+      "attendances": 1138652.0
+    },
+    {
+      "month": "2010-09",
+      "attendances": 1150728.0
+    },
+    {
+      "month": "2010-10",
+      "attendances": 1163143.0
+    },
+    {
+      "month": "2010-11",
+      "attendances": 1111294.5714285714
+    },
+    {
+      "month": "2010-12",
+      "attendances": 1159203.8571428563
+    },
+    {
+      "month": "2011-01",
+      "attendances": 1133880.571428571
+    },
+    {
+      "month": "2011-02",
+      "attendances": 1053707.1428571425
+    },
+    {
+      "month": "2011-03",
+      "attendances": 1225221.9999999993
+    },
+    {
+      "month": "2011-04",
+      "attendances": 1197212.7142857148
+    },
+    {
+      "month": "2011-05",
+      "attendances": 1221687.4285714289
+    },
+    {
+      "month": "2011-06",
+      "attendances": 1168467.857142857
+    },
+    {
+      "month": "2011-07",
+      "attendances": 1211065.8571428566
+    },
+    {
+      "month": "2011-08",
+      "attendances": 1135801.4285714286
+    },
+    {
+      "month": "2011-09",
+      "attendances": 1162142.857142857
+    },
+    {
+      "month": "2011-10",
+      "attendances": 1200707.8571428573
+    },
+    {
+      "month": "2011-11",
+      "attendances": 1134959.4285714277
+    },
+    {
+      "month": "2011-12",
+      "attendances": 1141606.4285714282
+    },
+    {
+      "month": "2012-01",
+      "attendances": 1137915.5714285711
+    },
+    {
+      "month": "2012-02",
+      "attendances": 1120423.0000000002
+    },
+    {
+      "month": "2012-03",
+      "attendances": 1263082.2857142864
+    },
+    {
+      "month": "2012-04",
+      "attendances": 1149633.714285714
+    },
+    {
+      "month": "2012-05",
+      "attendances": 1251414.285714286
+    },
+    {
+      "month": "2012-06",
+      "attendances": 1222084.2857142854
+    },
+    {
+      "month": "2012-07",
+      "attendances": 1248953.285714286
+    },
+    {
+      "month": "2012-08",
+      "attendances": 1197383.8571428573
+    },
+    {
+      "month": "2012-09",
+      "attendances": 1178360.714285714
+    },
+    {
+      "month": "2012-10",
+      "attendances": 1214433.4285714284
+    },
+    {
+      "month": "2012-11",
+      "attendances": 1167908.0000000002
+    },
+    {
+      "month": "2012-12",
+      "attendances": 1202080.2857142861
+    },
+    {
+      "month": "2013-01",
+      "attendances": 1149837.1428571434
+    },
+    {
+      "month": "2013-02",
+      "attendances": 1085332.7142857139
+    },
+    {
+      "month": "2013-03",
+      "attendances": 1226196.4285714282
+    },
+    {
+      "month": "2013-04",
+      "attendances": 1199089.1428571427
+    },
+    {
+      "month": "2013-05",
+      "attendances": 1229747.4285714282
+    },
+    {
+      "month": "2013-06",
+      "attendances": 1191352.4285714286
+    },
+    {
+      "month": "2013-07",
+      "attendances": 1281699.8571428573
+    },
+    {
+      "month": "2013-08",
+      "attendances": 1189671.428571429
+    },
+    {
+      "month": "2013-09",
+      "attendances": 1156569.1428571425
+    },
+    {
+      "month": "2013-10",
+      "attendances": 1199258.5714285714
+    },
+    {
+      "month": "2013-11",
+      "attendances": 1139112.1428571423
+    },
+    {
+      "month": "2013-12",
+      "attendances": 1172011.1428571427
+    },
+    {
+      "month": "2014-01",
+      "attendances": 1142283.5714285716
+    },
+    {
+      "month": "2014-02",
+      "attendances": 1084743.7142857143
+    },
+    {
+      "month": "2014-03",
+      "attendances": 1269436.142857143
+    },
+    {
+      "month": "2014-04",
+      "attendances": 1213065.8571428573
+    },
+    {
+      "month": "2014-05",
+      "attendances": 1287333.1428571427
+    },
+    {
+      "month": "2014-06",
+      "attendances": 1265211.142857143
+    },
+    {
+      "month": "2014-07",
+      "attendances": 1302588.4285714282
+    },
+    {
+      "month": "2014-08",
+      "attendances": 1188146.7142857146
+    },
+    {
+      "month": "2014-09",
+      "attendances": 1221781.5714285716
+    },
+    {
+      "month": "2014-10",
+      "attendances": 1250114.1428571434
+    },
+    {
+      "month": "2014-11",
+      "attendances": 1205519.2857142857
+    },
+    {
+      "month": "2014-12",
+      "attendances": 1241894.7142857136
+    },
+    {
+      "month": "2015-01",
+      "attendances": 1124040.428571428
+    },
+    {
+      "month": "2015-02",
+      "attendances": 1072451.571428571
+    },
+    {
+      "month": "2015-03",
+      "attendances": 1251324.8571428568
+    },
+    {
+      "month": "2015-04",
+      "attendances": 1206631.285714286
+    },
+    {
+      "month": "2015-05",
+      "attendances": 1254445.1428571427
+    },
+    {
+      "month": "2015-06",
+      "attendances": 1249213.0
+    },
+    {
+      "month": "2015-07",
+      "attendances": 1271523.0
+    },
+    {
+      "month": "2015-08",
+      "attendances": 1215826.0
+    },
+    {
+      "month": "2015-09",
+      "attendances": 1221594.0
+    },
+    {
+      "month": "2015-10",
+      "attendances": 1261395.0
+    },
+    {
+      "month": "2015-11",
+      "attendances": 1236294.0
+    },
+    {
+      "month": "2015-12",
+      "attendances": 1232965.0
+    },
+    {
+      "month": "2016-01",
+      "attendances": 1250005.0
+    },
+    {
+      "month": "2016-02",
+      "attendances": 1218372.0
+    },
+    {
+      "month": "2016-03",
+      "attendances": 1350373.0
+    },
+    {
+      "month": "2016-04",
+      "attendances": 1214057.0
+    },
+    {
+      "month": "2016-05",
+      "attendances": 1353206.0
+    },
+    {
+      "month": "2016-06",
+      "attendances": 1282499.0
+    },
+    {
+      "month": "2016-07",
+      "attendances": 1353477.0
+    },
+    {
+      "month": "2016-08",
+      "attendances": 1254439.0
+    },
+    {
+      "month": "2016-09",
+      "attendances": 1277578.0
+    },
+    {
+      "month": "2016-10",
+      "attendances": 1317571.0
+    },
+    {
+      "month": "2016-11",
+      "attendances": 1258205.0
+    },
+    {
+      "month": "2016-12",
+      "attendances": 1277133.0
+    },
+    {
+      "month": "2017-01",
+      "attendances": 1237177.0
+    },
+    {
+      "month": "2017-02",
+      "attendances": 1127909.0
+    },
+    {
+      "month": "2017-03",
+      "attendances": 1309507.0
+    },
+    {
+      "month": "2017-04",
+      "attendances": 1253743.0
+    },
+    {
+      "month": "2017-05",
+      "attendances": 1347297.0
+    },
+    {
+      "month": "2017-06",
+      "attendances": 1296877.0
+    },
+    {
+      "month": "2017-07",
+      "attendances": 1348648.0
+    },
+    {
+      "month": "2017-08",
+      "attendances": 1256655.0
+    },
+    {
+      "month": "2017-09",
+      "attendances": 1263957.0
+    },
+    {
+      "month": "2017-10",
+      "attendances": 1325211.0
+    },
+    {
+      "month": "2017-11",
+      "attendances": 1281913.0
+    },
+    {
+      "month": "2017-12",
+      "attendances": 1289587.0
+    },
+    {
+      "month": "2018-01",
+      "attendances": 1257026.0
+    },
+    {
+      "month": "2018-02",
+      "attendances": 1151757.0
+    },
+    {
+      "month": "2018-03",
+      "attendances": 1299796.0
+    },
+    {
+      "month": "2018-04",
+      "attendances": 1246348.0
+    },
+    {
+      "month": "2018-05",
+      "attendances": 1354711.0
+    },
+    {
+      "month": "2018-06",
+      "attendances": 1306739.0
+    },
+    {
+      "month": "2018-07",
+      "attendances": 1365859.0
+    },
+    {
+      "month": "2018-08",
+      "attendances": 1252767.0
+    },
+    {
+      "month": "2018-09",
+      "attendances": 1269088.0
+    },
+    {
+      "month": "2018-10",
+      "attendances": 1320032.0
+    },
+    {
+      "month": "2018-11",
+      "attendances": 1305353.0
+    },
+    {
+      "month": "2018-12",
+      "attendances": 1307359.0
+    },
+    {
+      "month": "2019-01",
+      "attendances": 1344354.0
+    },
+    {
+      "month": "2019-02",
+      "attendances": 1234328.0
+    },
+    {
+      "month": "2019-03",
+      "attendances": 1373061.0
+    },
+    {
+      "month": "2019-04",
+      "attendances": 1330825.0
+    },
+    {
+      "month": "2019-05",
+      "attendances": 1369332.0
+    },
+    {
+      "month": "2019-06",
+      "attendances": 1334137.0
+    },
+    {
+      "month": "2019-07",
+      "attendances": 1415918.0
+    },
+    {
+      "month": "2019-08",
+      "attendances": 1324070.0
+    },
+    {
+      "month": "2019-09",
+      "attendances": 1342510.0
+    },
+    {
+      "month": "2019-10",
+      "attendances": 1376347.0
+    },
+    {
+      "month": "2019-11",
+      "attendances": 1366383.0
+    },
+    {
+      "month": "2019-12",
+      "attendances": 1373654.0
+    },
+    {
+      "month": "2020-01",
+      "attendances": 1327234.0
+    },
+    {
+      "month": "2020-02",
+      "attendances": 1237255.0
+    },
+    {
+      "month": "2020-03",
+      "attendances": 1013021.0
+    },
+    {
+      "month": "2020-04",
+      "attendances": 689720.0
+    },
+    {
+      "month": "2020-05",
+      "attendances": 924218.0
+    },
+    {
+      "month": "2020-06",
+      "attendances": 1016132.0
+    },
+    {
+      "month": "2020-07",
+      "attendances": 1120421.0
+    },
+    {
+      "month": "2020-08",
+      "attendances": 1179019.0
+    },
+    {
+      "month": "2020-09",
+      "attendances": 1163948.0
+    },
+    {
+      "month": "2020-10",
+      "attendances": 1111958.0
+    },
+    {
+      "month": "2020-11",
+      "attendances": 1036350.0
+    },
+    {
+      "month": "2020-12",
+      "attendances": 1039474.0
+    },
+    {
+      "month": "2021-01",
+      "attendances": 941194.0
+    },
+    {
+      "month": "2021-02",
+      "attendances": 903771.0
+    },
+    {
+      "month": "2021-03",
+      "attendances": 1161079.0
+    },
+    {
+      "month": "2021-04",
+      "attendances": 1259266.0
+    },
+    {
+      "month": "2021-05",
+      "attendances": 1396116.0
+    },
+    {
+      "month": "2021-06",
+      "attendances": 1436111.0
+    },
+    {
+      "month": "2021-07",
+      "attendances": 1430733.0
+    },
+    {
+      "month": "2021-08",
+      "attendances": 1341757.0
+    },
+    {
+      "month": "2021-09",
+      "attendances": 1392405.0
+    },
+    {
+      "month": "2021-10",
+      "attendances": 1419010.0
+    },
+    {
+      "month": "2021-11",
+      "attendances": 1336830.0
+    },
+    {
+      "month": "2021-12",
+      "attendances": 1250568.0
+    },
+    {
+      "month": "2022-01",
+      "attendances": 1247417.0
+    },
+    {
+      "month": "2022-02",
+      "attendances": 1205820.0
+    },
+    {
+      "month": "2022-03",
+      "attendances": 1421526.0
+    },
+    {
+      "month": "2022-04",
+      "attendances": 1312380.0
+    },
+    {
+      "month": "2022-05",
+      "attendances": 1437421.0
+    },
+    {
+      "month": "2022-06",
+      "attendances": 1400664.0
+    },
+    {
+      "month": "2022-07",
+      "attendances": 1397083.0
+    },
+    {
+      "month": "2022-08",
+      "attendances": 1299083.0
+    },
+    {
+      "month": "2022-09",
+      "attendances": 1301611.0
+    },
+    {
+      "month": "2022-10",
+      "attendances": 1399185.0
+    },
+    {
+      "month": "2022-11",
+      "attendances": 1395183.0
+    },
+    {
+      "month": "2022-12",
+      "attendances": 1437681.0
+    },
+    {
+      "month": "2023-01",
+      "attendances": 1243898.0
+    },
+    {
+      "month": "2023-02",
+      "attendances": 1206386.0
+    },
+    {
+      "month": "2023-03",
+      "attendances": 1372403.0
+    },
+    {
+      "month": "2023-04",
+      "attendances": 1271145.0
+    },
+    {
+      "month": "2023-05",
+      "attendances": 1400815.0
+    },
+    {
+      "month": "2023-06",
+      "attendances": 1389009.0
+    },
+    {
+      "month": "2023-07",
+      "attendances": 1379854.0
+    },
+    {
+      "month": "2023-08",
+      "attendances": 1323647.0
+    },
+    {
+      "month": "2023-09",
+      "attendances": 1369045.0
+    },
+    {
+      "month": "2023-10",
+      "attendances": 1413597.0
+    },
+    {
+      "month": "2023-11",
+      "attendances": 1386008.0
+    },
+    {
+      "month": "2023-12",
+      "attendances": 1384220.0
+    },
+    {
+      "month": "2024-01",
+      "attendances": 1397975.0
+    },
+    {
+      "month": "2024-02",
+      "attendances": 1347642.0
+    },
+    {
+      "month": "2024-03",
+      "attendances": 1462878.0
+    },
+    {
+      "month": "2024-04",
+      "attendances": 1372028.0
+    },
+    {
+      "month": "2024-05",
+      "attendances": 1472721.0
+    },
+    {
+      "month": "2024-06",
+      "attendances": 1405658.0
+    },
+    {
+      "month": "2024-07",
+      "attendances": 1425569.0
+    },
+    {
+      "month": "2024-08",
+      "attendances": 1320157.0
+    },
+    {
+      "month": "2024-09",
+      "attendances": 1364482.0
+    },
+    {
+      "month": "2024-10",
+      "attendances": 1453242.0
+    },
+    {
+      "month": "2024-11",
+      "attendances": 1428050.0
+    },
+    {
+      "month": "2024-12",
+      "attendances": 1440311.0
+    },
+    {
+      "month": "2025-01",
+      "attendances": 1359026.0
+    },
+    {
+      "month": "2025-02",
+      "attendances": 1271336.0
+    },
+    {
+      "month": "2025-03",
+      "attendances": 1450686.0
+    },
+    {
+      "month": "2025-04",
+      "attendances": 1388613.0
+    },
+    {
+      "month": "2025-05",
+      "attendances": 1453480.0
+    },
+    {
+      "month": "2025-06",
+      "attendances": 1428563.0
+    },
+    {
+      "month": "2025-07",
+      "attendances": 1469050.0
+    },
+    {
+      "month": "2025-08",
+      "attendances": 1383870.0
+    },
+    {
+      "month": "2025-09",
+      "attendances": 1417440.0
+    },
+    {
+      "month": "2025-10",
+      "attendances": 1481222.0
+    },
+    {
+      "month": "2025-11",
+      "attendances": 1448958.0
+    },
+    {
+      "month": "2025-12",
+      "attendances": 1438921.0
+    },
+    {
+      "month": "2026-01",
+      "attendances": 1435727.0
+    },
+    {
+      "month": "2026-02",
+      "attendances": 1298005.0
+    },
+    {
+      "month": "2026-03",
+      "attendances": 1478125.0
+    }
+  ],
+  "test": [
+    {
+      "origin": "2024-05",
+      "month": "2024-06",
+      "horizon": 1,
+      "model": "seasonal_naive",
+      "actual": 1405658.0,
+      "predicted": 1389009.0,
+      "error": -16649.0,
+      "lower": 1239902.2258064516,
+      "upper": 1538115.7741935484,
+      "covered": true
+    },
+    {
+      "origin": "2024-05",
+      "month": "2024-06",
+      "horizon": 1,
+      "model": "recent_growth",
+      "actual": 1405658.0,
+      "predicted": 1480578.7424699594,
+      "error": 74920.74246995943
+    },
+    {
+      "origin": "2024-05",
+      "month": "2024-06",
+      "horizon": 1,
+      "model": "seasonal_trend",
+      "actual": 1405658.0,
+      "predicted": 1443406.8140526516,
+      "error": 37748.814052651636
+    },
+    {
+      "origin": "2024-05",
+      "month": "2024-08",
+      "horizon": 3,
+      "model": "seasonal_naive",
+      "actual": 1320157.0,
+      "predicted": 1323647.0,
+      "error": 3490.0,
+      "lower": 1169570.0,
+      "upper": 1477724.0,
+      "covered": true
+    },
+    {
+      "origin": "2024-05",
+      "month": "2024-08",
+      "horizon": 3,
+      "model": "recent_growth",
+      "actual": 1320157.0,
+      "predicted": 1410907.7844233797,
+      "error": 90750.7844233797
+    },
+    {
+      "origin": "2024-05",
+      "month": "2024-08",
+      "horizon": 3,
+      "model": "seasonal_trend",
+      "actual": 1320157.0,
+      "predicted": 1357468.2189655174,
+      "error": 37311.21896551736
+    },
+    {
+      "origin": "2024-06",
+      "month": "2024-07",
+      "horizon": 1,
+      "model": "seasonal_naive",
+      "actual": 1425569.0,
+      "predicted": 1379854.0,
+      "error": -45715.0,
+      "lower": 1225777.0,
+      "upper": 1533931.0,
+      "covered": true
+    },
+    {
+      "origin": "2024-06",
+      "month": "2024-07",
+      "horizon": 1,
+      "model": "recent_growth",
+      "actual": 1425569.0,
+      "predicted": 1450684.0394584583,
+      "error": 25115.039458458312
+    },
+    {
+      "origin": "2024-06",
+      "month": "2024-07",
+      "horizon": 1,
+      "model": "seasonal_trend",
+      "actual": 1425569.0,
+      "predicted": 1443015.263409964,
+      "error": 17446.26340996404
+    },
+    {
+      "origin": "2024-06",
+      "month": "2024-09",
+      "horizon": 3,
+      "model": "seasonal_naive",
+      "actual": 1364482.0,
+      "predicted": 1369045.0,
+      "error": 4563.0,
+      "lower": 1219938.2258064516,
+      "upper": 1518151.7741935484,
+      "covered": true
+    },
+    {
+      "origin": "2024-06",
+      "month": "2024-09",
+      "horizon": 3,
+      "model": "recent_growth",
+      "actual": 1364482.0,
+      "predicted": 1439320.1967747349,
+      "error": 74838.19677473488
+    },
+    {
+      "origin": "2024-06",
+      "month": "2024-09",
+      "horizon": 3,
+      "model": "seasonal_trend",
+      "actual": 1364482.0,
+      "predicted": 1393507.1473859858,
+      "error": 29025.147385985823
+    },
+    {
+      "origin": "2024-07",
+      "month": "2024-08",
+      "horizon": 1,
+      "model": "seasonal_naive",
+      "actual": 1320157.0,
+      "predicted": 1323647.0,
+      "error": 3490.0,
+      "lower": 1169570.0,
+      "upper": 1477724.0,
+      "covered": true
+    },
+    {
+      "origin": "2024-07",
+      "month": "2024-08",
+      "horizon": 1,
+      "model": "recent_growth",
+      "actual": 1320157.0,
+      "predicted": 1367499.844290048,
+      "error": 47342.844290047884
+    },
+    {
+      "origin": "2024-07",
+      "month": "2024-08",
+      "horizon": 1,
+      "model": "seasonal_trend",
+      "actual": 1320157.0,
+      "predicted": 1368568.0134099608,
+      "error": 48411.01340996078
+    },
+    {
+      "origin": "2024-07",
+      "month": "2024-10",
+      "horizon": 3,
+      "model": "seasonal_naive",
+      "actual": 1453242.0,
+      "predicted": 1413597.0,
+      "error": -39645.0,
+      "lower": 1259520.0,
+      "upper": 1567674.0,
+      "covered": true
+    },
+    {
+      "origin": "2024-07",
+      "month": "2024-10",
+      "horizon": 3,
+      "model": "recent_growth",
+      "actual": 1453242.0,
+      "predicted": 1460429.9162759248,
+      "error": 7187.91627592477
+    },
+    {
+      "origin": "2024-07",
+      "month": "2024-10",
+      "horizon": 3,
+      "model": "seasonal_trend",
+      "actual": 1453242.0,
+      "predicted": 1457669.680076627,
+      "error": 4427.680076627061
+    },
+    {
+      "origin": "2024-08",
+      "month": "2024-09",
+      "horizon": 1,
+      "model": "seasonal_naive",
+      "actual": 1364482.0,
+      "predicted": 1369045.0,
+      "error": 4563.0,
+      "lower": 1219938.2258064516,
+      "upper": 1518151.7741935484,
+      "covered": true
+    },
+    {
+      "origin": "2024-08",
+      "month": "2024-09",
+      "horizon": 1,
+      "model": "recent_growth",
+      "actual": 1364482.0,
+      "predicted": 1385454.7066361702,
+      "error": 20972.706636170158
+    },
+    {
+      "origin": "2024-08",
+      "month": "2024-09",
+      "horizon": 1,
+      "model": "seasonal_trend",
+      "actual": 1364482.0,
+      "predicted": 1403067.5506117907,
+      "error": 38585.550611790735
+    },
+    {
+      "origin": "2024-08",
+      "month": "2024-11",
+      "horizon": 3,
+      "model": "seasonal_naive",
+      "actual": 1428050.0,
+      "predicted": 1386008.0,
+      "error": -42042.0,
+      "lower": 1236901.2258064516,
+      "upper": 1535114.7741935484,
+      "covered": true
+    },
+    {
+      "origin": "2024-08",
+      "month": "2024-11",
+      "horizon": 3,
+      "model": "recent_growth",
+      "actual": 1428050.0,
+      "predicted": 1402621.0292834677,
+      "error": -25428.97071653232
+    },
+    {
+      "origin": "2024-08",
+      "month": "2024-11",
+      "horizon": 3,
+      "model": "seasonal_trend",
+      "actual": 1428050.0,
+      "predicted": 1421387.5506117905,
+      "error": -6662.449388209498
+    },
+    {
+      "origin": "2024-09",
+      "month": "2024-10",
+      "horizon": 1,
+      "model": "seasonal_naive",
+      "actual": 1453242.0,
+      "predicted": 1413597.0,
+      "error": -39645.0,
+      "lower": 1259520.0,
+      "upper": 1567674.0,
+      "covered": true
+    },
+    {
+      "origin": "2024-09",
+      "month": "2024-10",
+      "horizon": 1,
+      "model": "recent_growth",
+      "actual": 1453242.0,
+      "predicted": 1409869.8329154225,
+      "error": -43372.16708457749
+    },
+    {
+      "origin": "2024-09",
+      "month": "2024-10",
+      "horizon": 1,
+      "model": "seasonal_trend",
+      "actual": 1453242.0,
+      "predicted": 1468360.460632184,
+      "error": 15118.460632184055
+    },
+    {
+      "origin": "2024-09",
+      "month": "2024-12",
+      "horizon": 3,
+      "model": "seasonal_naive",
+      "actual": 1440311.0,
+      "predicted": 1384220.0,
+      "error": -56091.0,
+      "lower": 1230143.0,
+      "upper": 1538297.0,
+      "covered": true
+    },
+    {
+      "origin": "2024-09",
+      "month": "2024-12",
+      "horizon": 3,
+      "model": "recent_growth",
+      "actual": 1440311.0,
+      "predicted": 1380570.2899186867,
+      "error": -59740.71008131327
+    },
+    {
+      "origin": "2024-09",
+      "month": "2024-12",
+      "horizon": 3,
+      "model": "seasonal_trend",
+      "actual": 1440311.0,
+      "predicted": 1415252.7939655178,
+      "error": -25058.206034482224
+    },
+    {
+      "origin": "2024-10",
+      "month": "2024-11",
+      "horizon": 1,
+      "model": "seasonal_naive",
+      "actual": 1428050.0,
+      "predicted": 1386008.0,
+      "error": -42042.0,
+      "lower": 1236901.2258064516,
+      "upper": 1535114.7741935484,
+      "covered": true
+    },
+    {
+      "origin": "2024-10",
+      "month": "2024-11",
+      "horizon": 1,
+      "model": "recent_growth",
+      "actual": 1428050.0,
+      "predicted": 1382353.5755801965,
+      "error": -45696.424419803545
+    },
+    {
+      "origin": "2024-10",
+      "month": "2024-11",
+      "horizon": 1,
+      "model": "seasonal_trend",
+      "actual": 1428050.0,
+      "predicted": 1433369.4350203935,
+      "error": 5319.435020393459
+    },
+    {
+      "origin": "2024-10",
+      "month": "2025-01",
+      "horizon": 3,
+      "model": "seasonal_naive",
+      "actual": 1359026.0,
+      "predicted": 1397975.0,
+      "error": 38949.0,
+      "lower": 1243898.0,
+      "upper": 1552052.0,
+      "covered": true
+    },
+    {
+      "origin": "2024-10",
+      "month": "2025-01",
+      "horizon": 3,
+      "model": "recent_growth",
+      "actual": 1359026.0,
+      "predicted": 1394289.0227341582,
+      "error": 35263.02273415821
+    },
+    {
+      "origin": "2024-10",
+      "month": "2025-01",
+      "horizon": 3,
+      "model": "seasonal_trend",
+      "actual": 1359026.0,
+      "predicted": 1359148.9606321848,
+      "error": 122.9606321847532
+    },
+    {
+      "origin": "2024-11",
+      "month": "2024-12",
+      "horizon": 1,
+      "model": "seasonal_naive",
+      "actual": 1440311.0,
+      "predicted": 1384220.0,
+      "error": -56091.0,
+      "lower": 1230143.0,
+      "upper": 1538297.0,
+      "covered": true
+    },
+    {
+      "origin": "2024-11",
+      "month": "2024-12",
+      "horizon": 1,
+      "model": "recent_growth",
+      "actual": 1440311.0,
+      "predicted": 1423041.1080668678,
+      "error": -17269.891933132196
+    },
+    {
+      "origin": "2024-11",
+      "month": "2024-12",
+      "horizon": 1,
+      "model": "seasonal_trend",
+      "actual": 1440311.0,
+      "predicted": 1418804.0689655188,
+      "error": -21506.931034481153
+    },
+    {
+      "origin": "2024-11",
+      "month": "2025-02",
+      "horizon": 3,
+      "model": "seasonal_naive",
+      "actual": 1271336.0,
+      "predicted": 1301171.5862068967,
+      "error": 29835.586206896696,
+      "lower": 1162005.2636262516,
+      "upper": 1440337.9087875418,
+      "covered": true
+    },
+    {
+      "origin": "2024-11",
+      "month": "2025-02",
+      "horizon": 3,
+      "model": "recent_growth",
+      "actual": 1271336.0,
+      "predicted": 1337663.5620212003,
+      "error": 66327.56202120031
+    },
+    {
+      "origin": "2024-11",
+      "month": "2025-02",
+      "horizon": 3,
+      "model": "seasonal_trend",
+      "actual": 1271336.0,
+      "predicted": 1293173.2791991117,
+      "error": 21837.27919911174
+    },
+    {
+      "origin": "2024-12",
+      "month": "2025-01",
+      "horizon": 1,
+      "model": "seasonal_naive",
+      "actual": 1359026.0,
+      "predicted": 1397975.0,
+      "error": 38949.0,
+      "lower": 1243898.0,
+      "upper": 1552052.0,
+      "covered": true
+    },
+    {
+      "origin": "2024-12",
+      "month": "2025-01",
+      "horizon": 1,
+      "model": "recent_growth",
+      "actual": 1359026.0,
+      "predicted": 1440379.9969047797,
+      "error": 81353.99690477969
+    },
+    {
+      "origin": "2024-12",
+      "month": "2025-01",
+      "horizon": 1,
+      "model": "seasonal_trend",
+      "actual": 1359026.0,
+      "predicted": 1346825.9022988505,
+      "error": -12200.097701149527
+    },
+    {
+      "origin": "2024-12",
+      "month": "2025-03",
+      "horizon": 3,
+      "model": "seasonal_naive",
+      "actual": 1450686.0,
+      "predicted": 1462878.0,
+      "error": 12192.0,
+      "lower": 1308801.0,
+      "upper": 1616955.0,
+      "covered": true
+    },
+    {
+      "origin": "2024-12",
+      "month": "2025-03",
+      "horizon": 3,
+      "model": "recent_growth",
+      "actual": 1450686.0,
+      "predicted": 1507251.7098746903,
+      "error": 56565.70987469028
+    },
+    {
+      "origin": "2024-12",
+      "month": "2025-03",
+      "horizon": 3,
+      "model": "seasonal_trend",
+      "actual": 1450686.0,
+      "predicted": 1469331.568965517,
+      "error": 18645.568965516984
+    },
+    {
+      "origin": "2025-01",
+      "month": "2025-02",
+      "horizon": 1,
+      "model": "seasonal_naive",
+      "actual": 1271336.0,
+      "predicted": 1301171.5862068967,
+      "error": 29835.586206896696,
+      "lower": 1162005.2636262516,
+      "upper": 1440337.9087875418,
+      "covered": true
+    },
+    {
+      "origin": "2025-01",
+      "month": "2025-02",
+      "horizon": 1,
+      "model": "recent_growth",
+      "actual": 1271336.0,
+      "predicted": 1340640.2298419334,
+      "error": 69304.22984193335
+    },
+    {
+      "origin": "2025-01",
+      "month": "2025-02",
+      "horizon": 1,
+      "model": "seasonal_trend",
+      "actual": 1271336.0,
+      "predicted": 1280644.6340378192,
+      "error": 9308.634037819225
+    },
+    {
+      "origin": "2025-01",
+      "month": "2025-04",
+      "horizon": 3,
+      "model": "seasonal_naive",
+      "actual": 1388613.0,
+      "predicted": 1372028.0,
+      "error": -16585.0,
+      "lower": 1222921.2258064516,
+      "upper": 1521134.7741935484,
+      "covered": true
+    },
+    {
+      "origin": "2025-01",
+      "month": "2025-04",
+      "horizon": 3,
+      "model": "recent_growth",
+      "actual": 1388613.0,
+      "predicted": 1413645.9424476626,
+      "error": 25032.942447662586
+    },
+    {
+      "origin": "2025-01",
+      "month": "2025-04",
+      "horizon": 3,
+      "model": "seasonal_trend",
+      "actual": 1388613.0,
+      "predicted": 1364430.6366332956,
+      "error": -24182.363366704434
+    },
+    {
+      "origin": "2025-02",
+      "month": "2025-03",
+      "horizon": 1,
+      "model": "seasonal_naive",
+      "actual": 1450686.0,
+      "predicted": 1462878.0,
+      "error": 12192.0,
+      "lower": 1308801.0,
+      "upper": 1616955.0,
+      "covered": true
+    },
+    {
+      "origin": "2025-02",
+      "month": "2025-03",
+      "horizon": 1,
+      "model": "recent_growth",
+      "actual": 1450686.0,
+      "predicted": 1429334.5203068978,
+      "error": -21351.479693102185
+    },
+    {
+      "origin": "2025-02",
+      "month": "2025-03",
+      "horizon": 1,
+      "model": "seasonal_trend",
+      "actual": 1450686.0,
+      "predicted": 1463574.160714284,
+      "error": 12888.160714284051
+    },
+    {
+      "origin": "2025-02",
+      "month": "2025-05",
+      "horizon": 3,
+      "model": "seasonal_naive",
+      "actual": 1453480.0,
+      "predicted": 1472721.0,
+      "error": 19241.0,
+      "lower": 1318644.0,
+      "upper": 1626798.0,
+      "covered": true
+    },
+    {
+      "origin": "2025-02",
+      "month": "2025-05",
+      "horizon": 3,
+      "model": "recent_growth",
+      "actual": 1453480.0,
+      "predicted": 1438951.822421894,
+      "error": -14528.177578106057
+    },
+    {
+      "origin": "2025-02",
+      "month": "2025-05",
+      "horizon": 3,
+      "model": "seasonal_trend",
+      "actual": 1453480.0,
+      "predicted": 1481624.160714284,
+      "error": 28144.16071428405
+    },
+    {
+      "origin": "2025-03",
+      "month": "2025-04",
+      "horizon": 1,
+      "model": "seasonal_naive",
+      "actual": 1388613.0,
+      "predicted": 1372028.0,
+      "error": -16585.0,
+      "lower": 1222921.2258064516,
+      "upper": 1521134.7741935484,
+      "covered": true
+    },
+    {
+      "origin": "2025-03",
+      "month": "2025-04",
+      "horizon": 1,
+      "model": "recent_growth",
+      "actual": 1388613.0,
+      "predicted": 1340567.6913779771,
+      "error": -48045.30862202286
+    },
+    {
+      "origin": "2025-03",
+      "month": "2025-04",
+      "horizon": 1,
+      "model": "seasonal_trend",
+      "actual": 1388613.0,
+      "predicted": 1364694.5157450077,
+      "error": -23918.484254992334
+    },
+    {
+      "origin": "2025-03",
+      "month": "2025-06",
+      "horizon": 3,
+      "model": "seasonal_naive",
+      "actual": 1428563.0,
+      "predicted": 1405658.0,
+      "error": -22905.0,
+      "lower": 1256551.2258064516,
+      "upper": 1554764.7741935484,
+      "covered": true
+    },
+    {
+      "origin": "2025-03",
+      "month": "2025-06",
+      "horizon": 3,
+      "model": "recent_growth",
+      "actual": 1428563.0,
+      "predicted": 1373426.5626699927,
+      "error": -55136.43733000732
+    },
+    {
+      "origin": "2025-03",
+      "month": "2025-06",
+      "horizon": 3,
+      "model": "seasonal_trend",
+      "actual": 1428563.0,
+      "predicted": 1444620.5157450077,
+      "error": 16057.515745007666
+    },
+    {
+      "origin": "2025-04",
+      "month": "2025-05",
+      "horizon": 1,
+      "model": "seasonal_naive",
+      "actual": 1453480.0,
+      "predicted": 1472721.0,
+      "error": 19241.0,
+      "lower": 1318644.0,
+      "upper": 1626798.0,
+      "covered": true
+    },
+    {
+      "origin": "2025-04",
+      "month": "2025-05",
+      "horizon": 1,
+      "model": "recent_growth",
+      "actual": 1453480.0,
+      "predicted": 1460446.9659165018,
+      "error": 6966.965916501824
+    },
+    {
+      "origin": "2025-04",
+      "month": "2025-05",
+      "horizon": 1,
+      "model": "seasonal_trend",
+      "actual": 1453480.0,
+      "predicted": 1489680.6884920627,
+      "error": 36200.688492062734
+    },
+    {
+      "origin": "2025-04",
+      "month": "2025-07",
+      "horizon": 3,
+      "model": "seasonal_naive",
+      "actual": 1469050.0,
+      "predicted": 1425569.0,
+      "error": -43481.0,
+      "lower": 1271492.0,
+      "upper": 1579646.0,
+      "covered": true
+    },
+    {
+      "origin": "2025-04",
+      "month": "2025-07",
+      "horizon": 3,
+      "model": "recent_growth",
+      "actual": 1469050.0,
+      "predicted": 1413687.9427635113,
+      "error": -55362.057236488676
+    },
+    {
+      "origin": "2025-04",
+      "month": "2025-07",
+      "horizon": 3,
+      "model": "seasonal_trend",
+      "actual": 1469050.0,
+      "predicted": 1453530.3551587288,
+      "error": -15519.64484127122
+    },
+    {
+      "origin": "2025-05",
+      "month": "2025-06",
+      "horizon": 1,
+      "model": "seasonal_naive",
+      "actual": 1428563.0,
+      "predicted": 1405658.0,
+      "error": -22905.0,
+      "lower": 1256551.2258064516,
+      "upper": 1554764.7741935484,
+      "covered": true
+    },
+    {
+      "origin": "2025-05",
+      "month": "2025-06",
+      "horizon": 1,
+      "model": "recent_growth",
+      "actual": 1428563.0,
+      "predicted": 1393942.886138147,
+      "error": -34620.113861853024
+    },
+    {
+      "origin": "2025-05",
+      "month": "2025-06",
+      "horizon": 1,
+      "model": "seasonal_trend",
+      "actual": 1428563.0,
+      "predicted": 1450839.2523041477,
+      "error": 22276.252304147696
+    },
+    {
+      "origin": "2025-05",
+      "month": "2025-08",
+      "horizon": 3,
+      "model": "seasonal_naive",
+      "actual": 1383870.0,
+      "predicted": 1320157.0,
+      "error": -63713.0,
+      "lower": 1166080.0,
+      "upper": 1474234.0,
+      "covered": true
+    },
+    {
+      "origin": "2025-05",
+      "month": "2025-08",
+      "horizon": 3,
+      "model": "recent_growth",
+      "actual": 1383870.0,
+      "predicted": 1309154.473375087,
+      "error": -74715.5266249131
+    },
+    {
+      "origin": "2025-05",
+      "month": "2025-08",
+      "horizon": 3,
+      "model": "seasonal_trend",
+      "actual": 1383870.0,
+      "predicted": 1368437.7718253972,
+      "error": -15432.228174602846
+    },
+    {
+      "origin": "2025-06",
+      "month": "2025-07",
+      "horizon": 1,
+      "model": "seasonal_naive",
+      "actual": 1469050.0,
+      "predicted": 1425569.0,
+      "error": -43481.0,
+      "lower": 1271492.0,
+      "upper": 1579646.0,
+      "covered": true
+    },
+    {
+      "origin": "2025-06",
+      "month": "2025-07",
+      "horizon": 1,
+      "model": "recent_growth",
+      "actual": 1469050.0,
+      "predicted": 1442801.2007021722,
+      "error": -26248.79929782776
+    },
+    {
+      "origin": "2025-06",
+      "month": "2025-07",
+      "horizon": 1,
+      "model": "seasonal_trend",
+      "actual": 1469050.0,
+      "predicted": 1457953.4384920644,
+      "error": -11096.561507935636
+    },
+    {
+      "origin": "2025-06",
+      "month": "2025-09",
+      "horizon": 3,
+      "model": "seasonal_naive",
+      "actual": 1417440.0,
+      "predicted": 1364482.0,
+      "error": -52958.0,
+      "lower": 1215375.2258064516,
+      "upper": 1513588.7741935484,
+      "covered": true
+    },
+    {
+      "origin": "2025-06",
+      "month": "2025-09",
+      "horizon": 3,
+      "model": "recent_growth",
+      "actual": 1417440.0,
+      "predicted": 1380975.7843615436,
+      "error": -36464.2156384564
+    },
+    {
+      "origin": "2025-06",
+      "month": "2025-09",
+      "horizon": 3,
+      "model": "seasonal_trend",
+      "actual": 1417440.0,
+      "predicted": 1400321.5856374817,
+      "error": -17118.41436251835
+    },
+    {
+      "origin": "2025-07",
+      "month": "2025-08",
+      "horizon": 1,
+      "model": "seasonal_naive",
+      "actual": 1383870.0,
+      "predicted": 1320157.0,
+      "error": -63713.0,
+      "lower": 1166080.0,
+      "upper": 1474234.0,
+      "covered": true
+    },
+    {
+      "origin": "2025-07",
+      "month": "2025-08",
+      "horizon": 1,
+      "model": "recent_growth",
+      "actual": 1383870.0,
+      "predicted": 1341668.7731944756,
+      "error": -42201.226805524435
+    },
+    {
+      "origin": "2025-07",
+      "month": "2025-08",
+      "horizon": 1,
+      "model": "seasonal_trend",
+      "actual": 1383870.0,
+      "predicted": 1376472.938492062,
+      "error": -7397.061507937964
+    },
+    {
+      "origin": "2025-07",
+      "month": "2025-10",
+      "horizon": 3,
+      "model": "seasonal_naive",
+      "actual": 1481222.0,
+      "predicted": 1453242.0,
+      "error": -27980.0,
+      "lower": 1299165.0,
+      "upper": 1607319.0,
+      "covered": true
+    },
+    {
+      "origin": "2025-07",
+      "month": "2025-10",
+      "horizon": 3,
+      "model": "recent_growth",
+      "actual": 1481222.0,
+      "predicted": 1476922.3746074792,
+      "error": -4299.6253925208
+    },
+    {
+      "origin": "2025-07",
+      "month": "2025-10",
+      "horizon": 3,
+      "model": "seasonal_trend",
+      "actual": 1481222.0,
+      "predicted": 1484185.2718253946,
+      "error": 2963.271825394593
+    },
+    {
+      "origin": "2025-08",
+      "month": "2025-09",
+      "horizon": 1,
+      "model": "seasonal_naive",
+      "actual": 1417440.0,
+      "predicted": 1364482.0,
+      "error": -52958.0,
+      "lower": 1215375.2258064516,
+      "upper": 1513588.7741935484,
+      "covered": true
+    },
+    {
+      "origin": "2025-08",
+      "month": "2025-09",
+      "horizon": 1,
+      "model": "recent_growth",
+      "actual": 1417440.0,
+      "predicted": 1406099.7974142253,
+      "error": -11340.202585774707
+    },
+    {
+      "origin": "2025-08",
+      "month": "2025-09",
+      "horizon": 1,
+      "model": "seasonal_trend",
+      "actual": 1417440.0,
+      "predicted": 1408374.7307987714,
+      "error": -9065.269201228628
+    },
+    {
+      "origin": "2025-08",
+      "month": "2025-11",
+      "horizon": 3,
+      "model": "seasonal_naive",
+      "actual": 1448958.0,
+      "predicted": 1428050.0,
+      "error": -20908.0,
+      "lower": 1278943.2258064516,
+      "upper": 1577156.7741935484,
+      "covered": true
+    },
+    {
+      "origin": "2025-08",
+      "month": "2025-11",
+      "horizon": 3,
+      "model": "recent_growth",
+      "actual": 1448958.0,
+      "predicted": 1471606.6724935798,
+      "error": 22648.672493579797
+    },
+    {
+      "origin": "2025-08",
+      "month": "2025-11",
+      "horizon": 3,
+      "model": "seasonal_trend",
+      "actual": 1448958.0,
+      "predicted": 1466409.0641321049,
+      "error": 17451.06413210486
+    },
+    {
+      "origin": "2025-09",
+      "month": "2025-10",
+      "horizon": 1,
+      "model": "seasonal_naive",
+      "actual": 1481222.0,
+      "predicted": 1453242.0,
+      "error": -27980.0,
+      "lower": 1299165.0,
+      "upper": 1607319.0,
+      "covered": true
+    },
+    {
+      "origin": "2025-09",
+      "month": "2025-10",
+      "horizon": 1,
+      "model": "recent_growth",
+      "actual": 1481222.0,
+      "predicted": 1509644.9352061811,
+      "error": 28422.935206181137
+    },
+    {
+      "origin": "2025-09",
+      "month": "2025-10",
+      "horizon": 1,
+      "model": "seasonal_trend",
+      "actual": 1481222.0,
+      "predicted": 1486201.144047619,
+      "error": 4979.144047619076
+    },
+    {
+      "origin": "2025-09",
+      "month": "2025-12",
+      "horizon": 3,
+      "model": "seasonal_naive",
+      "actual": 1438921.0,
+      "predicted": 1440311.0,
+      "error": 1390.0,
+      "lower": 1286234.0,
+      "upper": 1594388.0,
+      "covered": true
+    },
+    {
+      "origin": "2025-09",
+      "month": "2025-12",
+      "horizon": 3,
+      "model": "recent_growth",
+      "actual": 1438921.0,
+      "predicted": 1496212.0598439558,
+      "error": 57291.059843955794
+    },
+    {
+      "origin": "2025-09",
+      "month": "2025-12",
+      "horizon": 3,
+      "model": "seasonal_trend",
+      "actual": 1438921.0,
+      "predicted": 1484930.4773809528,
+      "error": 46009.4773809528
+    },
+    {
+      "origin": "2025-10",
+      "month": "2025-11",
+      "horizon": 1,
+      "model": "seasonal_naive",
+      "actual": 1448958.0,
+      "predicted": 1428050.0,
+      "error": -20908.0,
+      "lower": 1278943.2258064516,
+      "upper": 1577156.7741935484,
+      "covered": true
+    },
+    {
+      "origin": "2025-10",
+      "month": "2025-11",
+      "horizon": 1,
+      "model": "recent_growth",
+      "actual": 1448958.0,
+      "predicted": 1483475.1883865087,
+      "error": 34517.18838650873
+    },
+    {
+      "origin": "2025-10",
+      "month": "2025-11",
+      "horizon": 1,
+      "model": "seasonal_trend",
+      "actual": 1448958.0,
+      "predicted": 1466296.924347158,
+      "error": 17338.924347158056
+    },
+    {
+      "origin": "2025-10",
+      "month": "2026-01",
+      "horizon": 3,
+      "model": "seasonal_naive",
+      "actual": 1435727.0,
+      "predicted": 1359026.0,
+      "error": -76701.0,
+      "lower": 1204949.0,
+      "upper": 1513103.0,
+      "covered": true
+    },
+    {
+      "origin": "2025-10",
+      "month": "2026-01",
+      "horizon": 3,
+      "model": "recent_growth",
+      "actual": 1435727.0,
+      "predicted": 1411772.242829147,
+      "error": -23954.757170852972
+    },
+    {
+      "origin": "2025-10",
+      "month": "2026-01",
+      "horizon": 3,
+      "model": "seasonal_trend",
+      "actual": 1435727.0,
+      "predicted": 1398956.8107142856,
+      "error": -36770.18928571441
+    },
+    {
+      "origin": "2025-11",
+      "month": "2025-12",
+      "horizon": 1,
+      "model": "seasonal_naive",
+      "actual": 1438921.0,
+      "predicted": 1440311.0,
+      "error": 1390.0,
+      "lower": 1286234.0,
+      "upper": 1594388.0,
+      "covered": true
+    },
+    {
+      "origin": "2025-11",
+      "month": "2025-12",
+      "horizon": 1,
+      "model": "recent_growth",
+      "actual": 1438921.0,
+      "predicted": 1468042.0329456485,
+      "error": 29121.032945648534
+    },
+    {
+      "origin": "2025-11",
+      "month": "2025-12",
+      "horizon": 1,
+      "model": "seasonal_trend",
+      "actual": 1438921.0,
+      "predicted": 1488651.6246031763,
+      "error": 49730.62460317626
+    },
+    {
+      "origin": "2025-11",
+      "month": "2026-02",
+      "horizon": 3,
+      "model": "seasonal_naive",
+      "actual": 1298005.0,
+      "predicted": 1271336.0,
+      "error": -26669.0,
+      "lower": 1132169.677419355,
+      "upper": 1410502.322580645,
+      "covered": true
+    },
+    {
+      "origin": "2025-11",
+      "month": "2026-02",
+      "horizon": 3,
+      "model": "recent_growth",
+      "actual": 1298005.0,
+      "predicted": 1295813.6721839858,
+      "error": -2191.327816014178
+    },
+    {
+      "origin": "2025-11",
+      "month": "2026-02",
+      "horizon": 3,
+      "model": "seasonal_trend",
+      "actual": 1298005.0,
+      "predicted": 1320973.1359040926,
+      "error": 22968.135904092574
+    },
+    {
+      "origin": "2025-12",
+      "month": "2026-01",
+      "horizon": 1,
+      "model": "seasonal_naive",
+      "actual": 1435727.0,
+      "predicted": 1359026.0,
+      "error": -76701.0,
+      "lower": 1204949.0,
+      "upper": 1513103.0,
+      "covered": true
+    },
+    {
+      "origin": "2025-12",
+      "month": "2026-01",
+      "horizon": 1,
+      "model": "recent_growth",
+      "actual": 1435727.0,
+      "predicted": 1378923.4234851722,
+      "error": -56803.576514827786
+    },
+    {
+      "origin": "2025-12",
+      "month": "2026-01",
+      "horizon": 1,
+      "model": "seasonal_trend",
+      "actual": 1435727.0,
+      "predicted": 1405886.54126984,
+      "error": -29840.458730160026
+    },
+    {
+      "origin": "2025-12",
+      "month": "2026-03",
+      "horizon": 3,
+      "model": "seasonal_naive",
+      "actual": 1478125.0,
+      "predicted": 1450686.0,
+      "error": -27439.0,
+      "lower": 1296609.0,
+      "upper": 1604763.0,
+      "covered": true
+    },
+    {
+      "origin": "2025-12",
+      "month": "2026-03",
+      "horizon": 3,
+      "model": "recent_growth",
+      "actual": 1478125.0,
+      "predicted": 1471925.4124071288,
+      "error": -6199.587592871161
+    },
+    {
+      "origin": "2025-12",
+      "month": "2026-03",
+      "horizon": 3,
+      "model": "seasonal_trend",
+      "actual": 1478125.0,
+      "predicted": 1500909.2079365074,
+      "error": 22784.207936507417
+    }
+  ],
+  "metrics": [
+    {
+      "model": "seasonal_naive",
+      "horizon": 1,
+      "n": 20,
+      "mae": 31751.679310344836,
+      "rmse": 37729.79619896533,
+      "wape": 0.022467643482437006,
+      "bias": -20785.620689655167,
+      "coverage": 1.0
+    },
+    {
+      "model": "recent_growth",
+      "horizon": 1,
+      "n": 20,
+      "mae": 38249.34364373175,
+      "rmse": 43184.511341302314,
+      "wape": 0.027065422525371616,
+      "bias": 3554.424561887153,
+      "coverage": null
+    },
+    {
+      "model": "seasonal_trend",
+      "horizon": 1,
+      "n": 20,
+      "mae": 21518.841481054853,
+      "rmse": 25505.576542085633,
+      "wape": 0.015226837416246456,
+      "bias": 10016.355087266327,
+      "coverage": null
+    },
+    {
+      "model": "seasonal_naive",
+      "horizon": 3,
+      "n": 20,
+      "mae": 31338.879310344833,
+      "rmse": 37126.6981297214,
+      "wape": 0.022218856408550633,
+      "bias": -20372.820689655164,
+      "coverage": 1.0
+    },
+    {
+      "model": "recent_growth",
+      "horizon": 3,
+      "n": 20,
+      "mae": 39696.363003368126,
+      "rmse": 47556.15026746243,
+      "wape": 0.028144203268378878,
+      "bias": 3894.2236855605033,
+      "coverage": null
+    },
+    {
+      "model": "seasonal_trend",
+      "horizon": 3,
+      "n": 20,
+      "mae": 20424.559215839534,
+      "rmse": 23437.90085459598,
+      "wape": 0.014480745910874905,
+      "bias": 6350.209670489235,
+      "coverage": null
+    }
+  ],
+  "projection": [
+    {
+      "month": "2026-04",
+      "horizon": 1,
+      "predicted": 1388613.0,
+      "lower": 1239506.2258064516,
+      "upper": 1537719.7741935484
+    },
+    {
+      "month": "2026-06",
+      "horizon": 3,
+      "predicted": 1428563.0,
+      "lower": 1279456.2258064516,
+      "upper": 1577669.7741935484
+    }
+  ]
+}

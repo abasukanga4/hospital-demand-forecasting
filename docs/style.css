@@ -1,0 +1,454 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Libre+Caslon+Display&display=swap");
+:root {
+  --ink: #17333b;
+  --muted: #637276;
+  --teal: #19776d;
+  --coral: #d78057;
+  --paper: #f6f4ed;
+  --line: #dce2dc;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font:
+    15px "DM Sans",
+    system-ui,
+    sans-serif;
+}
+header,
+main,
+footer {
+  max-width: 1320px;
+  margin: auto;
+  padding: 0 42px;
+}
+header {
+  height: 86px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--line);
+}
+a {
+  color: inherit;
+  text-underline-offset: 4px;
+}
+.brand {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-decoration: none;
+}
+nav {
+  display: flex;
+  gap: 26px;
+  font-size: 13px;
+}
+nav a {
+  text-decoration: none;
+}
+.hero {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 90px;
+  padding: 74px 0 56px;
+  align-items: center;
+}
+.eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.17em;
+  color: var(--teal);
+  margin: 0 0 20px;
+}
+h1 {
+  font-family: "Libre Caslon Display", Georgia, serif;
+  font-weight: 400;
+  font-size: 76px;
+  line-height: 1;
+  margin: 0 0 25px;
+  letter-spacing: -1.5px;
+}
+h1 em {
+  font-weight: 400;
+  color: var(--teal);
+}
+.intro {
+  font-size: 17px;
+  color: var(--muted);
+  max-width: 560px;
+  line-height: 1.6;
+}
+.hero aside {
+  padding: 32px;
+  background: #e7ede4;
+  border-radius: 6px;
+}
+.chip {
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+}
+.hero aside h2 {
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 500;
+  margin: 25px 0;
+}
+.hero aside p {
+  font-size: 14px;
+  line-height: 1.7;
+}
+.hero aside small {
+  display: block;
+  border-top: 1px solid #c6d3c4;
+  padding-top: 20px;
+  line-height: 1.7;
+  color: #4f635c;
+}
+.finding {
+  display: flex;
+  gap: 40px;
+  padding: 25px 30px;
+  background: var(--ink);
+  color: white;
+  border-radius: 6px;
+  align-items: center;
+}
+.finding span {
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  min-width: 95px;
+  color: #add8c0;
+}
+.finding p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.7;
+}
+.section-head {
+  margin: 60px 0 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 25px;
+}
+.section-head .eyebrow {
+  margin-bottom: 10px;
+}
+h2 {
+  font-weight: 500;
+  font-size: 30px;
+  margin: 0;
+}
+h3 {
+  font-size: 16px;
+  margin: 0 0 8px;
+}
+.controls {
+  display: flex;
+  gap: 15px;
+}
+label {
+  font-size: 11px;
+  color: var(--muted);
+  display: grid;
+  gap: 7px;
+}
+select {
+  padding: 10px 12px;
+  border: 1px solid #c8d3ce;
+  background: white;
+  border-radius: 4px;
+  color: var(--ink);
+  font: inherit;
+  font-size: 13px;
+}
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 22px;
+}
+.metric {
+  border-top: 2px solid var(--teal);
+  background: white;
+  padding: 21px 23px;
+}
+.metric span {
+  font-size: 12px;
+  color: var(--muted);
+}
+.metric strong {
+  display: block;
+  font-weight: 500;
+  font-size: 32px;
+  margin: 12px 0 8px;
+}
+.metric small {
+  font-size: 11px;
+  color: var(--muted);
+}
+.panel {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 28px;
+  margin-bottom: 22px;
+  min-width: 0;
+}
+.panel-title {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: start;
+}
+.panel p {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.6;
+  margin: 0;
+}
+.key {
+  white-space: nowrap;
+  font-size: 11px;
+  color: var(--muted);
+}
+.key i {
+  display: inline-block;
+  width: 16px;
+  height: 3px;
+  background: var(--teal);
+  vertical-align: middle;
+}
+.key .forecast {
+  background: var(--coral);
+}
+.chart {
+  width: 100%;
+  margin: 22px 0 4px;
+}
+.chart svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+.chart text {
+  font-family: "DM Sans", sans-serif;
+  fill: var(--muted);
+  font-size: 11px;
+}
+.chart circle:hover {
+  r: 6;
+}
+.footnote {
+  margin-top: 18px !important;
+  font-size: 11px !important;
+}
+.two-col {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 22px;
+}
+.two-col .panel {
+  margin: 0;
+}
+.comparison-row {
+  margin: 25px 0;
+}
+.comparison-row .labels {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+.bar-track {
+  height: 12px;
+  background: #eef2ed;
+  border-radius: 2px;
+}
+.bar {
+  height: 100%;
+  background: #80a99b;
+  border-radius: 2px;
+}
+.bar.chosen {
+  background: var(--teal);
+}
+.annotations {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  border-top: 1px solid var(--line);
+  padding-top: 22px;
+  margin-top: 15px;
+}
+.annotations b {
+  display: block;
+  color: var(--ink);
+  font-size: 12px;
+}
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin: 30px 0;
+}
+.timeline article {
+  padding: 25px;
+  border-left: 2px solid var(--teal);
+}
+.timeline b {
+  font-size: 12px;
+  color: var(--teal);
+}
+.timeline h3 {
+  font-size: 18px;
+  margin: 16px 0;
+}
+.timeline p {
+  font-size: 13px;
+  line-height: 1.8;
+  color: var(--muted);
+}
+details {
+  border-top: 1px solid var(--line);
+  padding: 20px 0;
+}
+summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+details p {
+  font-size: 13px;
+  line-height: 1.8;
+  color: var(--muted);
+  max-width: 1000px;
+}
+.downloads {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 30px 0 50px;
+  font-size: 12px;
+}
+footer {
+  border-top: 1px solid var(--line);
+  padding-top: 24px;
+  padding-bottom: 32px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: var(--muted);
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 13px;
+}
+td,
+th {
+  text-align: left;
+  padding: 12px;
+  border-bottom: 1px solid var(--line);
+}
+@media (max-width: 900px) {
+  header,
+  main,
+  footer {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+  .hero {
+    gap: 30px;
+  }
+  h1 {
+    font-size: 58px;
+  }
+  .section-head {
+    display: block;
+  }
+  .controls {
+    margin-top: 22px;
+  }
+  .two-col {
+    grid-template-columns: 1fr;
+  }
+  .metrics {
+    gap: 8px;
+  }
+  .metric {
+    padding: 16px 12px;
+  }
+  .metric strong {
+    font-size: 26px;
+  }
+}
+@media (max-width: 600px) {
+  header {
+    height: 75px;
+  }
+  .brand {
+    font-size: 10px;
+  }
+  nav {
+    gap: 12px;
+    font-size: 11px;
+  }
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 45px 0;
+    gap: 24px;
+  }
+  h1 {
+    font-size: 62px;
+  }
+  .hero aside {
+    padding: 24px;
+  }
+  .finding {
+    display: block;
+    padding: 24px;
+  }
+  .finding span {
+    display: block;
+    margin-bottom: 14px;
+  }
+  .controls {
+    flex-wrap: wrap;
+  }
+  .metrics {
+    grid-template-columns: 1fr 1fr;
+  }
+  .panel {
+    padding: 20px 15px;
+  }
+  .panel-title {
+    display: block;
+  }
+  .key {
+    display: block;
+    margin-top: 16px;
+  }
+  .timeline,
+  .annotations {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  footer {
+    display: grid;
+    gap: 15px;
+  }
+  .section-head h2 {
+    font-size: 27px;
+  }
+}
